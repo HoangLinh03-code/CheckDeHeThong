@@ -1,0 +1,1275 @@
+{
+  "exam": {
+    "name": "Toán 10 check tool",
+    "duration": 60,
+    "totalQuestion": 22,
+    "totalMultipleChoice": 22,
+    "totalEssay": 0,
+    "maxScore": 10,
+    "maxScoreMultipleChoice": 10.0,
+    "maxScoreEssay": 0.0,
+    "examId": "69cc7eaef92180a8261a5b97",
+    "testId": "69cc7f28f92180a8261a5b98",
+    "sections": [
+      "<p><strong> Câu trắc nghiệm nhiều phương án lựa chọn (3,0 điểm).</strong></p>",
+      "<p><strong> Câu trắc nghiệm đúng sai (4,0 điểm).</strong></p>",
+      "<p><strong> Trả lời ngắn (3,0 điểm).</strong></p>"
+    ],
+    "status": 0
+  },
+  "total": 22,
+  "questions": [
+    {
+      "index": 1,
+      "id": "",
+      "type": "unknown",
+      "content": "Cho tam giác $ABC$có $a = 5, b = 6, c = 7$. Diện tích tam giác $ABC$bằng",
+      "choices": [
+        {
+          "label": "",
+          "text": "$3\\sqrt{2}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\sqrt{216}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\sqrt{6}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$2\\sqrt{6}$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 0
+    },
+    {
+      "index": 2,
+      "id": "",
+      "type": "unknown",
+      "content": "Cặp số $\\left(x;y\\right)$ nào dưới đây là nghiệm của bất phương trình $3\\left(x-1\\right) + 4\\left(y-2\\right)",
+      "choices": [
+        {
+          "label": "",
+          "text": "$\\left(-2;2\\right)$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\left(-5;3\\right)$$\\left(-4;2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "(3,2)",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\left(0;0\\right)$",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 1
+    },
+    {
+      "index": 3,
+      "id": "",
+      "type": "unknown",
+      "content": "Cho hai tập hợp $A = \\left[-3;3\\right)$, $B = [1;5]$. Tập hợp $A\\cup B$ bằng",
+      "choices": [
+        {
+          "label": "",
+          "text": "$\\left[-3;1\\right)$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$[2;5]$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$[-3;5]$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\left[0;2\\right)$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 2
+    },
+    {
+      "index": 4,
+      "id": "",
+      "type": "unknown",
+      "content": "Cho hàm số $y = f\\left(x\\right)$ có tập xác định là $[-3;3]$ và đồ thị của nó được biểu diễn bởi hình bên. Khẳng định nào sau đây là khẳng định đúng?",
+      "choices": [
+        {
+          "label": "",
+          "text": "Đồ thị cắt trục hoành tại 3 điểm phân biệt.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Hàm số đồng biến trên khoảng $\\left(-3;-1\\right)$ và $\\left(1;3\\right)$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Hàm số đồng biến trên khoảng $\\left(-3;1\\right)$ và $\\left(1;4\\right)$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Hàm số nghịch biến trên khoảng $\\left(-2;1\\right)$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 3
+    },
+    {
+      "index": 5,
+      "id": "",
+      "type": "unknown",
+      "content": "Phần không bị gạch chéo (kể cả đường thẳng) trong hình vẽ bên là miền nghiệm của bất phương trình nào?",
+      "choices": [
+        {
+          "label": "",
+          "text": "$x-2y \\leq 4$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$-x + 2y \\leq -4$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$2x-4y \\geq -3$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$2x-4y \\geq -5$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 4
+    },
+    {
+      "index": 6,
+      "id": "",
+      "type": "unknown",
+      "content": "Tìm tập xác định $D$ của hàm số $y = \\sqrt{x + 2}-\\sqrt{x + 3}.$",
+      "choices": [
+        {
+          "label": "",
+          "text": "$D = \\left[-2; + \\infty \\right).$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$D = \\left[2; + \\infty \\right).$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$D = \\mathbb{R}.$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$D = \\left[-3; + \\infty \\right).$",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 5
+    },
+    {
+      "index": 7,
+      "id": "",
+      "type": "unknown",
+      "content": "[Mức độ 2] Phương trình tổng quát của đường thẳng đi qua $A\\left(1;2\\right)$ và $B\\left(3;1\\right)$ là",
+      "choices": [
+        {
+          "label": "",
+          "text": "$2\\text{x}-y = 0$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$x + 2y-5 = 0$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$2x-y-4 = 0$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$x + 2y + 5 = 0$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 6
+    },
+    {
+      "index": 8,
+      "id": "",
+      "type": "unknown",
+      "content": "Cho hàm số $f\\left(x\\right) = ax^{2} + bx + c$ có bảng xét dấu như hình dưới đây. Tìm khẳng định đúng.",
+      "choices": [
+        {
+          "label": "",
+          "text": "$f\\left(x\\right)",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$f\\left(x\\right) > 0, \\forall x\\in ℝ∖\\left\\{-\\frac{1}{3}\\right\\}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$f\\left(x\\right) \\geq 0, \\forall x\\in ℝ∖\\left\\{-\\frac{1}{3}\\right\\}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$f\\left(x\\right)",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 7
+    },
+    {
+      "index": 9,
+      "id": "",
+      "type": "unknown",
+      "content": "Giải phương trình$\\sqrt{x^{2}-6x + 6} = 2x-1$ có tập nghiệm $S$ là",
+      "choices": [
+        {
+          "label": "",
+          "text": "$S = \\left\\{7\\right\\}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$S = \\left\\{1;-\\frac{5}{3}\\right\\}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$S = \\left\\{1;7\\right\\}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$S = \\left\\{1\\right\\}$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 8
+    },
+    {
+      "index": 10,
+      "id": "",
+      "type": "unknown",
+      "content": "Thời gian ( phút) đi học từ nhà đến trường của bạn Nam trong 1 tuần là$151210171911$Hỏi trung bình bạn Nam đi từ nhà đến trường hết mấy phút",
+      "choices": [
+        {
+          "label": "",
+          "text": "$16$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$13, 5$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$14$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$15$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 9
+    },
+    {
+      "index": 11,
+      "id": "",
+      "type": "unknown",
+      "content": "Phương trình đường thẳng $\\left(d\\right)$ đi qua $M\\left(-2;3\\right)$và có vectơ chỉ phương $\\vec{u} = \\left(1;-4\\right)$ là:",
+      "choices": [
+        {
+          "label": "",
+          "text": "$\\left\\{\\begin{array}{l} x = 3-2t \\\\ y = -4 + t \\end{array}\\right.\\left(t\\in \\mathbb{R}\\right)$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\left\\{\\begin{array}{l} x = 3 + t \\\\ y = -2-4t \\end{array}\\right.\\left(t\\in \\mathbb{R}\\right)$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\left\\{\\begin{array}{l} x = 1-2t \\\\ y = -4 + 3t \\end{array}\\right.\\left(t\\in \\mathbb{R}\\right)$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\left\\{\\begin{array}{l} x = -2 + t \\\\ y = 3-4t \\end{array}\\right.\\left(t\\in \\mathbb{R}\\right)$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 10
+    },
+    {
+      "index": 12,
+      "id": "",
+      "type": "unknown",
+      "content": "Cho tam giác $ABC$ có $M$ thuộc cạnh $BC$ sao cho $CM = 2MB$. Đẳng thức nào sau đây đúng?",
+      "choices": [
+        {
+          "label": "",
+          "text": "$\\vec{AM} = \\vec{AB}-\\frac{2}{3}\\vec{BC}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\vec{AM} = \\vec{AB} + \\frac{2}{3}\\vec{BC}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\vec{AM} = \\vec{AB}-\\frac{1}{3}\\vec{BC}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\vec{AM} = \\vec{AB} + \\frac{1}{3}\\vec{BC}$.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 0,
+      "indexBlock": 11
+    },
+    {
+      "index": 13,
+      "id": "",
+      "type": "unknown",
+      "content": "Trong mặt phẳng tọa độ $Oxy$, cho điểm$M$ thỏa $\\vec{OM} = 5\\vec{i}-3\\vec{j}$",
+      "choices": [
+        {
+          "label": "",
+          "text": "$M\\left(5;-3\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "$\\vec{MO} = \\left(5;-3\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Điểm đối xứng với $M$ qua gốc tọa độ $O$là $N\\left(-3;-5\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Đường thẳng $\\Delta $ đi qua điểm $M$ cắt trục $Ox$ và $Oy$ lần lượt tại $A$ và $B$ sao cho $M$ là trung điểm của $AB$ có phương trình tổng quát là $3x-5y-30 = 0$",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 1,
+      "indexBlock": 0
+    },
+    {
+      "index": 14,
+      "id": "",
+      "type": "unknown",
+      "content": "Một trường cấp 3 ở tỉnh Ninh Bình có 8 giáo viên Toán gồm 3 nữ và 5 nam, giáo viên Vật lí thì có 4 giáo viên nam, chọn ra một đoàn thanh tra công tác ôn thi THPTQG. Các mệnh đề sau đúng hay sai?",
+      "choices": [
+        {
+          "label": "",
+          "text": "Chọn 1 giáo viên nữ có $C_{3}^{1}$ cách.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Chọn 2 giáo viên nam môn Vật lí có $C_{4}^{2}$ cách.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Chọn 1 giáo viên nam môn Toán và 1 giáo viên nam môn Vật lí có $C_{5}^{1} + C_{4}^{1}$ cách.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Có 80 cách chọn ra một đoàn thanh tra công tác ôn thi THPTQG gồm 3 người có đủ 2 môn Toán và Vật lí và phải có giáo viên nam và giáo viên nữ trong đoàn.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 1,
+      "indexBlock": 1
+    },
+    {
+      "index": 15,
+      "id": "",
+      "type": "unknown",
+      "content": "Trong mặt phẳng $Oxy$, cho hai điểm $A\\left(1;-2\\right), B\\left(-3;-1\\right)$ và đường thẳng $\\left(\\Delta \\right):3x + 4y-5 = 0.$",
+      "choices": [
+        {
+          "label": "",
+          "text": "Phương trình đường thẳng đi qua hai điểm $A, B$ là $x + 4y + 7 = 0.$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Phương trình đường thẳng $\\left(d\\right)$ song song với đường thẳng $\\left(\\Delta \\right)$ và cách điểm $A$ một khoảng bằng $3$ là $\\left(d\\right):3x + 4y + 20 = 0$ hoặc $\\left(d\\right):3x + 4y + 10 = 0.$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Hai đường thẳng $AB$ và $\\left(\\Delta \\right)$ cắt nhau tại điểm có tọa độ là $\\left(a;b\\right).$ Khi đó $2ab = -39.$",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Phương trình đường thẳng đi qua điểm $B$ và tạo với đường thẳng $\\left(\\Delta \\right)$ một góc $45°$có phương trình là $x-7y-4 = 0$ hoặc $7x + y + 22 = 0.$$$",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 1,
+      "indexBlock": 2
+    },
+    {
+      "index": 16,
+      "id": "",
+      "type": "unknown",
+      "content": "Cho đồ thị các hàm số $y = f\\left(x\\right) = -2x + 3;y = g\\left(x\\right) = 2x^{2}$. Xét tính đúng sai của các khẳng định sau:",
+      "choices": [
+        {
+          "label": "",
+          "text": "Đồ thị hàm số $y = -2x + 3$ là một đường cong",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Đồ thị hàm số $y = -2x + 3$cắt đồ thị hàm số $y = 2x^{2}$ tại hai điểm",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Hàm số $y = -2x + 3$ nghịch biến trên $\\mathbb{R}$.",
+          "is_correct": false
+        },
+        {
+          "label": "",
+          "text": "Hàm số $y = g\\left(x + 1\\right)$ nghịch biến trên khoảng $\\left(-1; + \\infty \\right)$",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 1,
+      "indexBlock": 3
+    },
+    {
+      "index": 17,
+      "id": "",
+      "type": "unknown",
+      "content": "Hai bạn An và Bình cùng xuất phát từ nhà đến trường, chuyển động đều hướng theo đường thẳng, sau khi xuất phát $t$ giờ $\\left(t \\geq 0\\right)$, vị trí của bạn An có tọa độ được xác định bởi công thức $\\left\\{\\begin{array}{l} x = 3-35t \\\\ y = -4 + 25t \\end{array}\\right.$, vị trí của bạn Bình có tọa độ là $\\left(4-30t;3-40t\\right)$. Hỏi sau mấy giờ kể từ thời điểm xuất phát thì hai bạn gần nhau nhất (làm tròn đến hàng phần trăm)?",
+      "choices": [
+        {
+          "label": "",
+          "text": "0,11.",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 2,
+      "indexBlock": 0
+    },
+    {
+      "index": 18,
+      "id": "",
+      "type": "unknown",
+      "content": "Hình vẽ bên dưới mô phỏng một trạm thu phát sóng điện thoại di động đặt ở vị trí $I$ có tọa độ $\\left(-2;1\\right)$ trong mặt phẳng toạ độ (đơn vị trên hai trục là ki-lô-mét). Tính theo đường chim bay, xác định khoảng cách ngắn nhất để một người ở vị trí có toạ độ $\\left(-4;4\\right)$ di chuyển được tới vùng phủ sóng theo đơn vị ki-lô-mét (làm tròn kết quả đến hàng phần trăm). Biết rằng trạm thu phát sóng đó được thiết kế với bán kính phủ sóng $3$km.",
+      "choices": [
+        {
+          "label": "",
+          "text": "0,61",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 2,
+      "indexBlock": 1
+    },
+    {
+      "index": 19,
+      "id": "",
+      "type": "unknown",
+      "content": "Cho khai triển ${\\left(1-2x\\right)}^{5} = a_{0} + a_{1}x + a_{2}x^{2} + a_{3}x^{3} + a_{4}x^{4} + a_{5}x^{5}$. Giá trị của $S = a_{0} + a_{1} + a_{2} + a_{3} + a_{4} + a_{5}$ bằng bao nhiêu?",
+      "choices": [
+        {
+          "label": "",
+          "text": "-1",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 2,
+      "indexBlock": 2
+    },
+    {
+      "index": 20,
+      "id": "",
+      "type": "unknown",
+      "content": "Trong một giải cờ vua gồm nam và nữ vận động viên. Mỗi vận động viên phải chơi hai ván với mỗi động viên còn lại. Cho biết có 2 vận động viên nữ và cho biết số ván các vận động viên nam chơi với nhau hơn số ván họ chơi với hai vận động viên nữ là $126$. Hỏi tổng số ván cờ vua của giải cờ đó?",
+      "choices": [
+        {
+          "label": "",
+          "text": "240",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 2,
+      "indexBlock": 3
+    },
+    {
+      "index": 21,
+      "id": "",
+      "type": "unknown",
+      "content": "Một anh shipper cần giao hàng gấp để kịp tiến độ công việc, anh lên kế hoạch sẽ giao đơn hàng đầu tiên tại điểm $M\\left(a;b\\right)$ cách xa mình nhất sau đó mới quay trở lại giao các điểm gần hơn. Giả sử vị trí ban đầu của anh shipper là điểm $S\\left(1;-1\\right)$ và anh cần giao hàng tại khu vực là một hình tròn có tâm tại điểm $I\\left(4;3\\right)$, bán kính $R = 2\\text{km}$. Biết rằng mỗi đơn vị trên trục tọa độ $Ox$, $Oy$ tương ứng với $1\\text{km}$. Tính giá trị $T = 3a + 4b$.",
+      "choices": [
+        {
+          "label": "",
+          "text": "34",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 2,
+      "indexBlock": 4
+    },
+    {
+      "index": 22,
+      "id": "",
+      "type": "unknown",
+      "content": "Một bó hoa gồm 10 bông hoa hồng và 6 bông hoa cúc. Bạn Quyên muốn chọn 4 bông hoa gồm cả hai loại hoa trên để cắm vào một chiếc bình. Hỏi bạn Quyên có tất cả bao nhiêu cách chọn hoa?",
+      "choices": [
+        {
+          "label": "",
+          "text": "1595",
+          "is_correct": false
+        }
+      ],
+      "correct_answer": null,
+      "explanation": "",
+      "score": 0,
+      "level": "",
+      "_raw_keys": [
+        "answerFreeText",
+        "answerOptionId",
+        "explain",
+        "imageAnswer",
+        "maxScoreTeacher",
+        "scoreTeacher",
+        "timeSetScore",
+        "content",
+        "indexMaterial",
+        "isEssay",
+        "maxScore",
+        "numberQuestion",
+        "options",
+        "rightAnswer",
+        "statusStep",
+        "stepId",
+        "stepIndex",
+        "stepNextId",
+        "template",
+        "typeAnswer",
+        "typeView",
+        "userOptionId",
+        "userOptionText",
+        "scoreOption"
+      ],
+      "typeData": 0,
+      "indexSection": 2,
+      "indexBlock": 5
+    }
+  ]
+}
