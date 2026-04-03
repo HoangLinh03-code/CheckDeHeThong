@@ -1,0 +1,8 @@
+*.xlsx
+venv/
+*.docx
+*.pdf
+*.json
+.env
+__pycache__/
+test.py

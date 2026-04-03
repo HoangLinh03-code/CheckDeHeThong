@@ -207,7 +207,7 @@ def parse_questions(data: dict) -> list[dict]:
                 })
 
     # Sap xep lai theo STT de dam bao thu tu chinh xac
-    questions.sort(key=lambda q: q["stt"])
+    questions.sort(key=lambda q: (q["type_answer"], q["stt"]))
     return questions
 
 
@@ -253,12 +253,23 @@ def export_excel(questions: list[dict], exam_info: dict, out_path: Path) -> None
         start_row  = current_row
 
         for q in group_list:
+            # Xử lý format cho cột A (Dạng) trên từng dòng để giữ nguyên Border/Fill khi Merge
+            cell_dang = ws.cell(row=current_row, column=1)
+            if current_row == start_row:
+                cell_dang.value = dang  # Chỉ gán text ở dòng đầu tiên của nhóm
+            cell_dang.fill       = fill
+            cell_dang.border     = _border()
+            cell_dang.alignment  = Alignment(horizontal="center", vertical="center", wrap_text=True)
+            cell_dang.font       = Font(bold=True, name="Arial", size=10)
+
+            # Xử lý cột B (STT)
             cell_stt            = ws.cell(row=current_row, column=2, value=q["stt"])
             cell_stt.fill       = fill
             cell_stt.border     = _border()
             cell_stt.alignment  = Alignment(horizontal="center", vertical="center")
             cell_stt.font       = Font(name="Arial", size=10)
 
+            # Xử lý cột C (Đáp án)
             cell_ans            = ws.cell(row=current_row, column=3, value=q["dap_an"])
             cell_ans.fill       = fill
             cell_ans.border     = _border()
@@ -268,6 +279,7 @@ def export_excel(questions: list[dict], exam_info: dict, out_path: Path) -> None
             ws.row_dimensions[current_row].height = 28
             current_row += 1
 
+        # Merge cells cột A theo dạng
         end_row = current_row - 1
         if start_row < end_row:
             ws.merge_cells(f"A{start_row}:A{end_row}")
