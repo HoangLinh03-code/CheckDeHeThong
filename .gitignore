@@ -3,6 +3,10 @@ venv/
 *.docx
 *.pdf
 *.json
+onluyen_data/
 .env
 __pycache__/
 test.py
+*.spec
+build/
+dist/

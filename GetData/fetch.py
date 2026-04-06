@@ -207,7 +207,7 @@ def parse_questions(data: dict) -> list[dict]:
                 })
 
     # Sap xep lai theo STT de dam bao thu tu chinh xac
-    questions.sort(key=lambda q: q["stt"])
+    questions.sort(key=lambda q: (q["type_answer"], q["stt"]))
     return questions
 
 

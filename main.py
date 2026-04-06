@@ -1,16 +1,26 @@
 import sys
 import os
 
-class DummyStream:
-    """Hút mọi lệnh print() vào hư vô khi không có màn hình console"""
-    encoding = 'utf-8' # Giả lập encoding để tránh lỗi của callAPI.py
-    def write(self, text): pass
-    def flush(self): pass
+# =====================================================================
+# FIX LỖI CRASH KHI BUILD --NOCONSOLE
+# =====================================================================
+if getattr(sys, 'frozen', False):
+    app_dir = os.path.dirname(sys.executable)
+else:
+    app_dir = os.path.dirname(os.path.abspath(__file__))
 
-if sys.stdout is None:
-    sys.stdout = DummyStream()
-if sys.stderr is None:
-    sys.stderr = DummyStream()
+log_file = open(os.path.join(app_dir, "error_log.txt"), "w", encoding="utf-8")
+
+if sys.stdout is None: sys.stdout = log_file
+if sys.stderr is None: sys.stderr = log_file
+
+def global_exception_handler(exc_type, exc_value, exc_traceback):
+    traceback.print_exception(exc_type, exc_value, exc_traceback, file=sys.stderr)
+    log_file.flush()
+    sys.exit(1)
+
+sys.excepthook = global_exception_handler
+# =====================================================================
 
 import json
 import traceback
@@ -22,22 +32,31 @@ from PyQt5.QtCore import QThread, pyqtSignal
 from docx2pdf import convert
 
 # =====================================================================
-# THIẾT LẬP ĐƯỜNG DẪN MODULES
+# QUẢN LÝ ĐƯỜNG DẪN KHI BUILD EXE
 # =====================================================================
-current_dir = os.path.dirname(os.path.abspath(__file__))
-check_answer_dir = os.path.join(current_dir, "CheckAnswer")
-get_data_dir = os.path.join(current_dir, "GetData")
-export_dir = os.path.join(current_dir, "export")
+if getattr(sys, 'frozen', False):
+    # Khi chạy bằng file .exe
+    bundle_dir = sys._MEIPASS # Thư mục ảo chứa thư viện, code, prompt, env
+    app_dir = os.path.dirname(sys.executable) # THƯ MỤC THẬT CHỨA FILE .EXE
+else:
+    # Khi chạy code .py bình thường
+    bundle_dir = os.path.dirname(os.path.abspath(__file__))
+    app_dir = bundle_dir
 
-for d in [check_answer_dir, get_data_dir, export_dir]:
+# Chỉ định đường dẫn để import code từ thư mục ảo (bundle_dir)
+check_answer_dir = os.path.join(bundle_dir, "CheckAnswer")
+get_data_dir = os.path.join(bundle_dir, "GetData")
+export_script_dir = os.path.join(bundle_dir, "export")
+
+for d in [check_answer_dir, get_data_dir, export_script_dir]:
     if d not in sys.path:
         sys.path.insert(0, d)
 
 try:
     from GetData.fetch import load_from_url
     from CheckAnswer.ai_check_de import process_exam_universal
-    from CheckAnswer.check_answer import (flatten_pdf_questions, flatten_sys_questions, find_matching_sys_q, 
-                        check_image_issues, check_formula_issues, check_TN, check_DS, check_DIEN)
+    from CheckAnswer.testAI import (flatten_pdf_questions, flatten_sys_questions, find_matching_sys_q, 
+                                    check_image_issues, check_formula_issues, check_TN, check_DS, check_DIEN, strip_html)
     from export.export_excel import export_to_excel
 except ImportError as e:
     print(f"Lỗi Import: {e}. Vui lòng kiểm tra lại cấu trúc thư mục.")
@@ -45,7 +64,7 @@ except ImportError as e:
 
 
 # =====================================================================
-# HÀM RÚT GỌN THÔNG BÁO LỖI CHO NGƯỜI DÙNG DỄ NHÌN
+# HÀM RÚT GỌN LỖI (Giữ nguyên)
 # =====================================================================
 def summarize_issues(issues):
     if not issues: return "✅ Khớp hoàn toàn"
@@ -66,14 +85,13 @@ def summarize_issues(issues):
         elif "lệch loại câu" in issue_lower: summaries.append("⚠️ Lệch loại câu hỏi")
         else: summaries.append("❌ Lỗi cấu trúc/định dạng")
     
-    # Xóa trùng lặp nhưng giữ nguyên thứ tự
     seen = set()
     unique_summaries = [x for x in summaries if not (x in seen or seen.add(x))]
     return "\n".join(unique_summaries)
 
 
 # =====================================================================
-# WORKER THREAD
+# LUỒNG XỬ LÝ (ĐÃ CẬP NHẬT ĐƯỜNG DẪN LƯU FILE)
 # =====================================================================
 class WorkerThread(QThread):
     log_signal = pyqtSignal(str)
@@ -89,7 +107,6 @@ class WorkerThread(QThread):
         try:
             pythoncom.CoInitialize() 
 
-            base_dir = os.path.dirname(self.docx_path)
             base_name = os.path.splitext(os.path.basename(self.docx_path))[0]
             
             # --- BƯỚC 1: TẢI DATA HỆ THỐNG ĐỂ LẤY ID ---
@@ -98,11 +115,17 @@ class WorkerThread(QThread):
             sys_data, json_id = load_from_url(self.sys_link)
             if not json_id: json_id = "UnknownID"
             
-            # Định nghĩa các đường dẫn (File excel lưu vào folder export)
-            pdf_path = os.path.join(base_dir, f"{base_name}.pdf")
-            ai_json_path = os.path.join(base_dir, f"{base_name}_ai.json")
-            sys_json_path = os.path.join(base_dir, f"{base_name}_{json_id}_sys.json")
-            excel_path = os.path.join(export_dir, f"{base_name}_{json_id}_KetQua.xlsx")
+            # ==============================================================
+            # THAY ĐỔI QUAN TRỌNG: LƯU TẤT CẢ VÀO THƯ MỤC CỦA FILE EXE (app_dir)
+            # ==============================================================
+            pdf_path = os.path.join(app_dir, f"{base_name}.pdf")
+            ai_json_path = os.path.join(app_dir, f"{base_name}_ai.json")
+            sys_json_path = os.path.join(app_dir, f"{base_name}_{json_id}_sys.json")
+            
+            # Tạo thư mục 'export' bên cạnh file exe nếu chưa có
+            export_out_dir = os.path.join(app_dir, "export")
+            os.makedirs(export_out_dir, exist_ok=True)
+            excel_path = os.path.join(export_out_dir, f"{base_name}_{json_id}_KetQua.xlsx")
 
             with open(sys_json_path, 'w', encoding='utf-8') as f:
                 json.dump(sys_data, f, ensure_ascii=False, indent=2)
@@ -164,12 +187,10 @@ class WorkerThread(QThread):
                 total_err += 1
                 continue
 
-            # Lấy vị trí câu trên hệ thống
             sys_idx = sys_qs.index(sys_q) + 1
             cau_so_sys = f"Câu {sys_idx}"
             
             issues = []
-            
             pdf_co_hinh = pdf_q.get("co_hinh", False)
             image_issues = check_image_issues(pdf_co_hinh, sys_q.get("content", ""), sys_q.get("options", {}))
             if image_issues: issues.extend(image_issues)
@@ -184,7 +205,6 @@ class WorkerThread(QThread):
             if sys_q.get("type") != qtype:
                 issues.append(f"⚠️ Lệch loại câu")
 
-            # Xử lý thống kê lỗi
             if issues:
                 errs = sum(1 for i in issues if "❌" in i)
                 warns = sum(1 for i in issues if "⚠️" in i and "❌" not in i)
@@ -194,9 +214,7 @@ class WorkerThread(QThread):
             else:
                 total_ok += 1
 
-            # Nén mảng lỗi dài dòng thành tóm tắt
             error_str = summarize_issues(issues)
-
             results_data.append({
                 "STT": cau_so_goc,
                 "Câu hỏi đề gốc": cau_so_goc,
@@ -212,12 +230,11 @@ class WorkerThread(QThread):
             "❌ Số câu có LỖI (Mất nội dung/Sai đáp án)": total_err
         }
 
-        # Gọi file export_excel.py
         export_to_excel(results_data, summary_data, excel_path)
 
 
 # =====================================================================
-# GIAO DIỆN (UI)
+# GIAO DIỆN (Giữ nguyên)
 # =====================================================================
 class MainWindow(QMainWindow):
     def __init__(self):
