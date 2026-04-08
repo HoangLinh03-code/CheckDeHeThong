@@ -22,11 +22,15 @@ schema_da_nang = {
             },
             "noi_dung_cau_hoi": {
                 "type": "STRING",
-                "description": "Nội dung câu hỏi. Giữ nguyên định dạng LaTeX cho công thức Toán/Lý/Hóa."
+                "description": "Nội dung câu hỏi. Chú ý BẮT BUỘC: Nếu câu hỏi có chứa hình ảnh/đồ thị, phải chèn cụm từ [HÌNH_ẢNH] vào đúng vị trí xuất hiện của hình ảnh đó trong văn bản. Giữ nguyên định dạng LaTeX cho công thức."
             },
             "co_hinh": {
                 "type": "BOOLEAN",
-                "description": "Đánh dấu nếu câu hỏi có chứa hình ảnh hoặc biểu đồ."
+                "description": "Đánh dấu True nếu câu hỏi có chứa hình ảnh, đồ thị hoặc sơ đồ. Tuyệt đối KHÔNG chọn True nếu nó là BẢNG BIỂU (Table)."
+            },
+            "co_bang": {
+                "type": "BOOLEAN",
+                "description": "Đánh dấu True nếu câu hỏi có chứa bảng biểu (table)."
             },
             "cac_lua_chon": {
                 "type": "ARRAY",
@@ -62,7 +66,18 @@ schema_da_nang = {
                             "enum": ["trac_nghiem", "dung_sai", "tra_loi_ngan", "tu_luan"]
                         },
                         "cau_so": {"type": "INTEGER"},
-                        "noi_dung_cau_hoi": {"type": "STRING"},
+                        "noi_dung_cau_hoi": {
+                            "type": "STRING",
+                            "description": "Nội dung câu hỏi. Chú ý BẮT BUỘC: Nếu câu hỏi có chứa hình ảnh/đồ thị, phải chèn cụm từ [HÌNH_ẢNH] vào đúng vị trí xuất hiện của hình ảnh đó trong văn bản. Giữ nguyên định dạng LaTeX cho công thức."
+                        },
+                        "co_hinh": {
+                            "type": "BOOLEAN",
+                            "description": "Đánh dấu True nếu câu hỏi có chứa hình ảnh, đồ thị hoặc sơ đồ. Tuyệt đối KHÔNG chọn True nếu nó là BẢNG BIỂU (Table)."
+                        },
+                        "co_bang": {
+                            "type": "BOOLEAN",
+                            "description": "Đánh dấu True nếu câu hỏi có chứa bảng biểu (table)."
+                        },
                         "cac_lua_chon": {
                             "type": "ARRAY",
                             "items": {

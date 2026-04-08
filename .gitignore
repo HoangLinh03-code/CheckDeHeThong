@@ -10,3 +10,4 @@ test.py
 *.spec
 build/
 dist/
+error_log.txt

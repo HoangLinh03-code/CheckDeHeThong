@@ -63,6 +63,6 @@ def process_exam_universal(pdf_path, output_json_path):
 
 if __name__ == "__main__":
     # Test thử với file của bạn hoặc bất kỳ file môn nào khác
-    pdf_file = "D:\CheckTool\FetchJson\Toán_ĐỀ_ONLINE_10_mới_2.pdf" 
-    out_file = "dapan_Toan_pdf.json"
+    pdf_file = "D:\CheckTool\FetchJson\dist\GS 10 - Đề Onluyen Vòng 2 - HS.pdf" 
+    out_file = "dapan_TA_pdf.json"
     process_exam_universal(pdf_file, out_file)

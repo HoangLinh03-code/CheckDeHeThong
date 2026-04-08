@@ -55,7 +55,7 @@ for d in [check_answer_dir, get_data_dir, export_script_dir]:
 try:
     from GetData.fetch import load_from_url
     from CheckAnswer.ai_check_de import process_exam_universal
-    from CheckAnswer.testAI import (flatten_pdf_questions, flatten_sys_questions, find_matching_sys_q, 
+    from CheckAnswer.check_answer import (flatten_pdf_questions, flatten_sys_questions, find_matching_sys_q, 
                                     check_image_issues, check_formula_issues, check_TN, check_DS, check_DIEN, strip_html)
     from export.export_excel import export_to_excel
 except ImportError as e:
@@ -192,7 +192,16 @@ class WorkerThread(QThread):
             
             issues = []
             pdf_co_hinh = pdf_q.get("co_hinh", False)
-            image_issues = check_image_issues(pdf_co_hinh, sys_q.get("content", ""), sys_q.get("options", {}))
+            pdf_co_bang = pdf_q.get("co_bang", False)
+            
+            # Truyền đủ 5 tham số: hình, bảng, nội dung hệ thống, lựa chọn hệ thống, nội dung gốc
+            image_issues = check_image_issues(
+                pdf_co_hinh, 
+                pdf_co_bang, 
+                sys_q.get("content", ""), 
+                sys_q.get("options", {}),
+                pdf_q.get("content", "")
+            )
             if image_issues: issues.extend(image_issues)
 
             formula_issues = check_formula_issues(pdf_q.get("content", ""), sys_q.get("content", ""), sys_q.get("options", {}))
