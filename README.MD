@@ -4,8 +4,6 @@
 
 ## 1. TỔNG QUAN HỆ THỐNG
 
-Dự án **"Check Đề Hệ Thống"** là một ứng dụng Desktop được phát triển trên nền tảng PyQt5, tích hợp sức mạnh của Google Vertex AI (GenAI SDK mới nhất).
-
 Mục tiêu cốt lõi của phần mềm là giải quyết bài toán "kiểm thử dữ liệu giáo dục": Tự động hóa hoàn toàn quy trình đối chiếu giữa **Tài liệu gốc của giáo viên (File Word .docx)** và **Dữ liệu đã được đưa lên hệ thống học trực tuyến (định dạng JSON)**.
 
 Hệ thống có khả năng vượt qua rào cản về "trộn đề" (shuffling), phân tích sâu sắc các công thức Toán/Hóa (LaTeX, MathType) và nhận diện cấu trúc đa phương tiện (Hình ảnh, Bảng biểu) để phát hiện chính xác các lỗi: Sai đáp án, lệch nội dung, mất công thức, thiếu hình ảnh hoặc sai vị trí hiển thị.
@@ -22,8 +20,6 @@ Hệ thống có khả năng vượt qua rào cản về "trộn đề" (shuffli
 ---
 
 ## 2. KIẾN TRÚC MÃ NGUỒN VÀ CHỨC NĂNG MODULE
-
-Hệ thống được thiết kế theo hướng module hóa (Modular Design), phân tách rõ ràng giữa UI, AI Connector, Data Fetcher và Core Logic Matching.
 
 ### Sơ đồ cấu trúc thư mục
 
@@ -145,7 +141,9 @@ Mỗi câu Đúng/Sai chứa 4 ý phụ (a, b, c, d). Khi hệ thống web trộ
 
 1. **Khởi động ứng dụng:**
    Mở Terminal, đảm bảo đã activate venv và chạy lệnh:
+   ```bash
    python main.py
+   ```
 2. **Thao tác trên giao diện:**
    - **Link Preview JSON:** Dán đường link URL lấy từ hệ thống (VD: URL có param `?url=...`).
    - **File Đề Gốc (.docx):** Bấm nút `Chọn File` và trỏ đến file Word gốc của đề thi.
@@ -153,14 +151,3 @@ Mỗi câu Đúng/Sai chứa 4 ý phụ (a, b, c, d). Khi hệ thống web trộ
 3. **Theo dõi:** Thanh Progress Bar và Log Console sẽ hiển thị chi tiết tiến trình (Tải data -> Convert PDF -> AI bóc tách -> Đối chiếu).
 4. **Nhận kết quả:**
    Khi hoàn thành, hệ thống sẽ bật thông báo. Thư mục `export/` sẽ sinh ra file Excel `[Tên_Đề]_[ID]_KetQua.xlsx`.
-
----
-
-## 7. LƯU Ý
-
-- **Biên dịch mã nguồn ra file Thực thi (.exe):**
-  Dự án này sử dụng PyInstaller. Khi build, các file tĩnh (`.env`, `prompt.txt`, thư mục con) được đẩy vào thư mục tạm `sys._MEIPASS`. Trong `main.py`, biến `app_dir` và `bundle_dir` đã được cấu hình chặt chẽ để hệ thống nhận diện đúng đường dẫn ở cả mode `development` và `production`. Không tự ý thay đổi block code này để tránh crash phần mềm khi chạy exe.
-- **Giới hạn Rate Limit của AI:**
-  Thao tác đẩy PDF nguyên cuốn sách/đề thi lớn lên Vertex AI có thể vướng giới hạn Payload hoặc Token. Nếu xảy ra lỗi trả về rỗng, hãy kiểm tra lại file Log xem có bị Google Cloud Safety Filter chặn (Do chứa từ khóa nhạy cảm trong Sinh học/Lịch sử) hoặc vượt quá `max_output_tokens` không.
-- **Porting sang Linux/Docker (Nếu làm luồng CI/CD Auto-check):**
-  Hiện tại, module `docx2pdf` phụ thuộc vào Windows COM (`pythoncom`). Nếu muốn đưa tool này lên Server Linux/Docker để chạy Background Job, bạn PHẢI thay thế thư viện chuyển đổi PDF (Gợi ý: Sử dụng lệnh command-line của `LibreOffice` ở mode `--headless` để convert `docx` sang `pdf` trên môi trường Linux).
